@@ -22,7 +22,7 @@ function twoNumberSumWithHash(array, targetSum) {
 
   for (const num of array) {
     const potentialMatch = targetSum - num;
-
+    
     if (potentialMatch in nums) {
       return [potentialMatch, num];
     } else {
