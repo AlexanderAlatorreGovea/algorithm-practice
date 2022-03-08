@@ -24,12 +24,11 @@ function forisValidSubsequence(array, sequence) {
   let sequenceIdx = 0;
 
   for (const value of array) {
-    if (sequenceIdx === sequence.length) break;
-
+    if (sequence.length === sequenceIdx) break;
     if (sequence[sequenceIdx] === value) sequenceIdx++;
   }
 
-  return sequenceIdx === sequence.length;
+  return sequence.length === sequenceIdx;
 }
 
 console.log(

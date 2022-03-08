@@ -9,3 +9,23 @@ Time Complexity: how fast an algorithm runs.
 Space Complexity: measure of how much memory or space an algo takes up
 One solution may have a better time Complexity and a worse space Complexity.
 
+Memory: 
+When you write code you create variables and behind the scenes a variable has to be stored.
+So to think of "memory" you can image it as a canvas that lives in your computer and is divided into slots.
+In this canvas there is a finite number of memory slots. 
+When you declare a variable, your program will store the number one in a memory slot.
+So that memory slot is not free anymore. Your program will always store memory in a slot that is free.
+So we store variables and information in back to back memory slots.
+Memory is composed of bits (0101), so when you store data in a memory slot, you store them in a bit.
+The conjunction of 8 bits is called a byte. So the number one is transformed in a binary number.
+So the number one could be represented in a binary like 0000 0001.
+So with one byte you do not have many combinations. So you can increase the number of bits to store more info.
+
+Integers whether we represent them with 62 bits or less, the key thing to remember, we are dealing with fixed width integers.
+So you know that a 32 bit integer, it will only take up 4 memory slots (8*4). This implies that the number of memory slots is always a constant.
+
+Strings are mapped to an integer like 65 which is transformed into a bits of binary.
+
+At a memory slot you can store a pointer to a memory slot. So instead of pointing to an address, you are not storing extra memory.
+So with pointers you can jump across memory slots.
+
