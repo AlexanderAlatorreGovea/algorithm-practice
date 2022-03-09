@@ -25,7 +25,7 @@ function forisValidSubsequence(array, sequence) {
 
   for (const value of array) {
     if (sequence.length === sequenceIdx) break;
-    if (sequence[sequenceIdx] === value) sequenceIdx++;
+    if (value === sequence[sequenceIdx]) sequenceIdx++;
   }
 
   return sequence.length === sequenceIdx;
