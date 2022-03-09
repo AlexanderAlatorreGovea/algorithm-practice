@@ -29,3 +29,28 @@ Strings are mapped to an integer like 65 which is transformed into a bits of bin
 At a memory slot you can store a pointer to a memory slot. So instead of pointing to an address, you are not storing extra memory.
 So with pointers you can jump across memory slots.
 
+
+Big 0 Notation:
+The algos are affected by the sizes of the array.
+Time Complexity: measure of an algorithm speed as the size of the input increases.
+
+0(1) or constant: Complexity means that as the size of the input increases, the speed remains constant. 
+    This picks up only a value in a memory slot.
+    Additions and multiplications are constant times.
+0(n) or linear time Complexity: as the size increases the speed of the algorithm increases linearly
+
+0(n^2): 0 of n*n 
+
+3 sample algorithms 
+a = [..., 1000]
+B1(a) => 1 + a[0] // has an 0(1) Complexity (constant speed). You are only grabing one spot in memory.
+B2(a) => sum(a)  // 0(n), this is linear because we would go through all elements once
+B3(a) => pair(a) // retraverse through the array multiple times 
+
+0(1) // you just did a bunch of addition or other operations for example
+0(log(n)) 
+0(n) //traverse through the array once from left to right and once from right through left
+0(nlog(n))
+0(n^2), // two nested algorithms
+0(n^3), 
+0(n^4)
