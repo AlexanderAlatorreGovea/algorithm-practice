@@ -2,18 +2,28 @@
 // 1 means that homeTeam won
 // [homeTeam, awayTeam]
 function tournamentWinner(competitions, results) {
+  const HOME_TEAM_WON = 1;
   let currentBestTeam = "";
   const scores = { [currentBestTeam]: 0 };
-  const HOME_TEAM_WON = 1;
 
   for (let index = 0; index < competitions.length; index++) {
-    const result = results[index];
-    const [homeTeam, awayTeam] = competitions[index];
+    const [awayTeam, homeTeam] = competitions[index];
+    const winningTeam = results[index] === HOME_TEAM_WON ? homeTeam : awayTeam;
 
-    const winningTeam = result === HOME_TEAM_WON ? homeTeam : awayTeam;
+    updateResults(winningTeam, 3, scores);
+
+    if (scores[winningTeam] > scores[currentBestTeam]) {
+      currentBestTeam = winningTeam;
+    }
   }
 
   return currentBestTeam;
+}
+
+function updateResults(team, points, scores) {
+  if (!(team in scores)) scores[team] = 0;
+
+  scores[team] += points;
 }
 
 console.log(
