@@ -1,4 +1,5 @@
 // Time = 0(log(N)), Space 0(log(N))
+// worst case scenary: 0(n) | 0(n) space
 // worst case scenary 0(N), this is the worst case because it only has only branch
 // worst case on space is 0(N)
 function findClosestValueInBst(tree, target) {
@@ -9,9 +10,7 @@ function findClosestValueInBst(tree, target) {
 function findClosestValueInBstHelper(tree, target, closestValue) {
   let currentNode = tree;
 
-  if (tree === null) return closestValue;
-
-  while (currentNode !== null) {
+  while (currentNode) {
     if (
       Math.abs(target - closestValue) > Math.abs(target - currentNode.value)
     ) {
@@ -52,5 +51,5 @@ root.right = new BST(15);
 root.right.left = new BST(13);
 root.right.left.right = new BST(14);
 root.right.right = new BST(22);
-
-console.log(findClosestValueInBst(root, 10));
+console.log(root)
+console.log(findClosestValueInBst(root, 12));
