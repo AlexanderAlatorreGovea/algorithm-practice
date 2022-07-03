@@ -14,7 +14,7 @@ const minimumWaitingTime = (queries) => {
 
     waitingTime += duration * queriesLeft;
   }
-  
+
   return waitingTime;
 };
 
