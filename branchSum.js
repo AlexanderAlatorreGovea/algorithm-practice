@@ -28,11 +28,3 @@ function nodeDepths(root, depths = 0) {
     nodeDepths(root.right, depths + 1)
   );
 }
-
-//selector (div)
-//ruleset is everything from div downward or series of declarations
-// div { 
-//     // declaration = property + value
-//     //property    //value
-//     height:        300
-// }
