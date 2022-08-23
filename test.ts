@@ -8,7 +8,7 @@ const filters = {
 const checkForFilters = (filters) => {
   let hasFilters = false;
 
-  for (filter in filters) {
+  for (const filter in filters) {
     if (Array.isArray(filters[filter]) && filters[filter].length) {
       hasFilters = true;
     }
