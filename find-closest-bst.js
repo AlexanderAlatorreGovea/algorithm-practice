@@ -25,17 +25,19 @@ function findClosestBST(tree, target) {
 // }
 
 function closestValueHelper(tree, target, closestValue) {
-  let node = tree;
+  let currentNode = tree;
 
-  while (node) {
-    if (Math.abs(target - closestValue) > Math.abs(target - node.value)) {
-      closestValue = node.value;
+  while (currentNode) {
+    if (
+      Math.abs(target - closestValue) > Math.abs(target - currentNode.value)
+    ) {
+      closestValue = currentNode.value;
     }
 
-    if (target > node.value) {
-      node = node.right;
-    } else if (target < node.value) {
-      node = node.left;
+    if (target > currentNode.value) {
+      currentNode = currentNode.right;
+    } else if (target < currentNode.value) {
+      currentNode = currentNode.left;
     } else {
       break;
     }
