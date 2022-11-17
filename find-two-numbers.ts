@@ -31,4 +31,19 @@ function twoNumberSumWithHash(array, targetSum) {
   }
 }
 
+
+function twoNumberSum2(array, targetSum) {
+  const nums = {};
+
+  for(const num of array) {
+    const target = targetSum - num;
+
+    if(nums[num] === target) {
+      return [target, num]
+    } else {
+      nums[num] = true
+    }
+  }
+}
+
 console.log(twoNumberSumWithHash([3, 5, -4, 8, 11, 1, -1, 6], 10));
